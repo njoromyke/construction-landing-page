@@ -1,15 +1,26 @@
 $(document).ready(function () {
-  // if page is loading 
-    $(window).on("load", function () {
-        $(".preloader").css("display", "none")
-    });
+  // if page is loading
+  $(window).on("load", function () {
+    $(".preloader").css("display", "none");
+  });
 
-    
+  // scroll to top
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $(".scroll-top").fadeIn();
+    } else {
+      $(".scroll-top").fadeOut();
+    }
+  });
 
-    
-
-
-
+  $(".scroll-top").click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      1000
+    );
+  });
 
   $(".burger").click(function () {
     $(".nav-links").toggleClass("active");

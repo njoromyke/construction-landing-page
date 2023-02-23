@@ -904,3 +904,19 @@ svg {
     margin-bottom: 1rem;
   }
 }
+
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffbb02;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
